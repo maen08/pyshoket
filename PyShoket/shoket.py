@@ -1,4 +1,7 @@
-from utils import url
+from utils import pay_url
+from utils import private_key
+import requests
+import json
 
 
 """"
@@ -127,7 +130,7 @@ class PyShoket(object):
 
     @url.setter
     def url(self):
-        self.__url = url()
+        self.__url = pay_url()
         return self.__url
 
 
@@ -135,12 +138,43 @@ class PyShoket(object):
     @property
     def headers(self):
         headers = {
-            'Authorization': PRIVATE_KEY
+            'Authorization': private_key(),
+            'Content-Type': 'application/json'
         }
 
         return headers
 
 
+    def make_payment(self):
+        payload = json.dumps({
+            "amount":self.amount,
+            "customer_name":self.customer_name,
+            "customer_email":self.customer_email,
+            "customer_number":self.customer_number,
+            "channel":self.channel
+        })
+
+        res = requests.post(
+            data=payload,
+            headers=self.headers,
+            url=self.url
+        )
+
+        if res.status_code == 200:
+            data = {
+                'detail': res.content,
+                'message': 'Successful payment',
+                'status_code': res.status_code
+            }
+        
+            return data
+        else:
+            data = {
+                'detail':res.content,
+                'message': 'Errors!, Unsuccessful payment',
+                'status_code': res.status_code
+            }
+        return data
 
 
 

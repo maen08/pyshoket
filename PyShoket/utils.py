@@ -3,14 +3,9 @@ from decouple import config
 
 
 
-@dataclass
-class url():
-
+def pay_url():
     SHOKET_PAYMENT_URL = "https://api.shoket.co/v1/charge/"
-
-    def __init__(self) -> str:
-        self.url = self.SHOKET_PAYMENT_URL
-        return self.url
+    return SHOKET_PAYMENT_URL
 
 
 def private_key():
