@@ -2,6 +2,18 @@ from dataclasses import dataclass
 from decouple import config
 
 
+class CustomerDetails():
+    """
+    Required details in order to make payment
+    """
+    amount: str 
+    customer_number: str         
+    customer_email: str
+    customer_name: str 
+    channel: str 
+    url: str 
+
+
 
 def pay_url():
     SHOKET_PAYMENT_URL = "https://api.shoket.co/v1/charge/"

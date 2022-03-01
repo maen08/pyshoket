@@ -1,5 +1,5 @@
-from utils import pay_url
-from utils import private_key
+from typing import Dict
+from utils import private_key, pay_url, CustomerDetails
 import requests
 import json
 
@@ -145,19 +145,32 @@ class PyShoket(object):
         return headers
 
 
-    def make_payment(self):
+    def make_payment(
+        self,
+        amount,
+        customer_name,
+        customer_email,
+        customer_number,
+        channel
+        
+    ):
+
+
         payload = json.dumps({
-            "amount":self.amount,
-            "customer_name":self.customer_name,
-            "customer_email":self.customer_email,
-            "customer_number":self.customer_number,
-            "channel":self.channel
+            "amount":amount,
+            "customer_name":customer_name,
+            "customer_email":customer_email,
+            "customer_number":customer_number,
+            "channel":channel
         })
+
+        print(pay_url())
+        print(self.headers)
 
         res = requests.post(
             data=payload,
             headers=self.headers,
-            url=self.url
+            url=pay_url()
         )
 
         if res.status_code == 200:
