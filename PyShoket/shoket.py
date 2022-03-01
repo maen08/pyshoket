@@ -1,5 +1,5 @@
 from typing import Dict
-from utils import private_key, pay_url, CustomerDetails
+from utils import private_key, pay_url
 import requests
 import json
 
@@ -133,8 +133,6 @@ class PyShoket(object):
         self.__url = pay_url()
         return self.__url
 
-
-
     @property
     def headers(self):
         headers = {
@@ -144,7 +142,6 @@ class PyShoket(object):
 
         return headers
 
-
     def make_payment(
         self,
         amount,
@@ -152,20 +149,16 @@ class PyShoket(object):
         customer_email,
         customer_number,
         channel
-        
+
     ):
 
-
         payload = json.dumps({
-            "amount":amount,
-            "customer_name":customer_name,
-            "customer_email":customer_email,
-            "customer_number":customer_number,
-            "channel":channel
+            "amount": amount,
+            "customer_name": customer_name,
+            "customer_email": customer_email,
+            "customer_number": customer_number,
+            "channel": channel
         })
-
-        print(pay_url())
-        print(self.headers)
 
         res = requests.post(
             data=payload,
@@ -179,17 +172,14 @@ class PyShoket(object):
                 'message': 'Successful payment',
                 'status_code': res.status_code
             }
-        
+
             return data
         else:
             data = {
-                'detail':res.content,
+                'detail': res.content,
                 'message': 'Errors!, Unsuccessful payment',
                 'status_code': res.status_code
             }
         return data
 
 
-
-# if __name__ == "__main__":
-#     PyShoket(object)

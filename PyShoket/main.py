@@ -1,5 +1,14 @@
 from shoket import PyShoket
 
+
+""""
+Python library for Shoket Payment API
+=======================================
+Shoket is the payment aggregator which enable live online payments (send and receive money) on web systems.
+It allows payments via MNO (Mpesa, TigoPesa, AirtelMoney) on easy way.
+
+"""
+
 pyshoket = PyShoket()
 
 resp = pyshoket.make_payment(
