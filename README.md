@@ -90,5 +90,5 @@ Credits to all contributors of Pyshoket. Your work is worthy.
 Share the project with your team, give it a star and use it.
 
 # Licence
-Pyshoket is an Open Source project under [MIT licence]()
+Pyshoket is an Open Source project under [MIT licence](https://github.com/maen08/pyshoket/blob/master/LICENCE)
 
