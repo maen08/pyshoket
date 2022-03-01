@@ -1,3 +1,5 @@
 from shoket import PyShoket
+from utils import url
 
-print(PyShoket.url)
+print(url)
+# print(PyShoket.url)

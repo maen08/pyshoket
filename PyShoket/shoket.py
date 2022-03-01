@@ -82,14 +82,12 @@ class PyShoket(object):
             )
         self.__customer_email = customer_email
 
-
     @property
     def customer_name(self):
         """
         str: [customer_name]
         """
         return self.__customer_name
-
 
     @customer_name.setter
     def customer_number(self, customer_name: str):
@@ -102,14 +100,13 @@ class PyShoket(object):
             )
         self.__customer_name = customer_name
 
-
     @property
     def channel(self):
         """
         str: [channel]
         """
         return self.__channel
-    
+
     @channel.setter
     def channel(self, channel: str):
         """
@@ -128,8 +125,24 @@ class PyShoket(object):
         """
         return self.__url
 
-    
     @url.setter
     def url(self):
         self.__url = url()
         return self.__url
+
+
+
+    @property
+    def headers(self):
+        headers = {
+            'Authorization': PRIVATE_KEY
+        }
+
+        return headers
+
+
+
+
+
+# if __name__ == "__main__":
+#     PyShoket(object)
