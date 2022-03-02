@@ -18,11 +18,11 @@ setup(
 
     long_description_content_type='text/markdown',
 
-    version='0.0.1',    
+    version='0.2',    
 
     url='https://github.com/maen08/pyshoket',
 
-    download_url='https://github.com/maen08/pyshoket/archive/refs/tags/v0.0.1.tar.gz',
+    download_url='https://github.com/maen08/pyshoket/archive/refs/tags/v0.2.tar.gz',
 
     author='Stanley Ruheza',
 
