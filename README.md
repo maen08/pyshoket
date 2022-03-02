@@ -1,4 +1,8 @@
 # pyshoket
+
+[![Made in Tanzania](https://img.shields.io/badge/made%20in-tanzania-008751.svg?style=flat-square)](https://github.com/Tanzania-Developers-Community/made-in-tanzania)
+
+
 - A Python wrapper for Shoket API. 
 - Make online payments easy with `pyshoket`, connecting MNO such as Tigo (Tigopesa),
 Halotel (Halopesa) and Airtel (Airtel money)
@@ -29,9 +33,9 @@ NB: No space between equal sign
 To enable payments in your project with `pyshoket`, this is how you can do it.
 
 ```
-from pyshoket import Pyshoket
+from pyshoket.pyshoket import PyShoket
 
-shoket = Pyshoket()
+shoket = PyShoket()
 response = shoket.make_payment(
     amount=2000,
     customer_name='Stanley Ruheza',
@@ -71,6 +75,20 @@ If we check the response of the above request (Successful request), it will be s
 
 ```
 
+If the private key is incorrect, then you'll recieve this response:
+
+```
+# Unsuccessful response
+
+{
+    "detail": "Unauthorized Access",
+    "message": "Errors!, Unsuccessful payment",
+    "status_code": "401"
+}
+
+
+```
+
 
 
 # Contribution
@@ -83,7 +101,7 @@ Pyshoket is an open source project so feel free to contribute. You can contribut
 
 # Credits
 Credits to all contributors of Pyshoket. Your work is worthy.
-- [maen08](https://github.com/maen08/) - maintainer
+- [maen08](https://github.com/maen08/) - author/maintainer
 - Contributors
 
 # Give it a star

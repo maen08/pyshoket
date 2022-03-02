@@ -18,11 +18,11 @@ setup(
 
     long_description_content_type='text/markdown',
 
-    version='0.0',    # keep on changing
+    version='0.1',    
 
-    url='https://github.com/maen08/',
+    url='https://github.com/maen08/pyshoket',
 
-    download_url='https://github.com/maen08/pyshoket/archive/refs/tags/v0.0.tar.gz',
+    download_url='https://github.com/maen08/pyshoket/archive/refs/tags/v0.1.tar.gz',
 
     author='Stanley Ruheza',
 
@@ -40,7 +40,7 @@ setup(
 
     classifiers=[
        
-        'Development Status :: 3 - Alpha',  # keep on increasing
+        'Development Status :: 3 - Alpha',  
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',

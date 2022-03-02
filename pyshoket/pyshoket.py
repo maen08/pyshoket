@@ -1,5 +1,5 @@
 from typing import Dict
-from utils import private_key, pay_url
+from .utils import private_key, pay_url
 import requests
 import json
 
@@ -183,3 +183,6 @@ class PyShoket(object):
         return data
 
 
+
+if __name__ == "__main__":
+    PyShoket()

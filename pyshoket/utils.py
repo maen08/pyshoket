@@ -16,3 +16,7 @@ def private_key():
     """
     key = config('PRIVATE_KEY')
     return key
+
+if __name__ == "__main__":
+    pay_url()
+    private_key()
