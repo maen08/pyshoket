@@ -33,7 +33,7 @@ NB: No space between equal sign
 To enable payments in your project with `pyshoket`, this is how you can do it.
 
 ```
-from pyshoket.pyshoket import PyShoket
+from pyshoket import PyShoket
 
 shoket = PyShoket()
 response = shoket.make_payment(
