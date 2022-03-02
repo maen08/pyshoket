@@ -1,5 +1,5 @@
 from typing import Dict
-from .utils import private_key, pay_url
+from pyshoket.utils import private_key, pay_url
 import requests
 import json
 
