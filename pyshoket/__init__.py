@@ -135,8 +135,9 @@ class PyShoket(object):
 
     @property
     def headers(self):
+        key = private_key()
         headers = {
-            'Authorization': private_key(),
+            'Authorization': f'Bearer {key}',
             'Content-Type': 'application/json'
         }
 
