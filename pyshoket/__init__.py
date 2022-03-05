@@ -156,8 +156,8 @@ class PyShoket(object):
         payload = json.dumps({
             "amount": amount,
             "customer_name": customer_name,
-            "customer_email": customer_email,
-            "customer_number": customer_number,
+            "email": customer_email,
+            "number_used": customer_number,
             "channel": channel
         })
 
@@ -167,7 +167,7 @@ class PyShoket(object):
             url=pay_url()
         )
 
-        if res.status_code == 200:
+        if res.status_code == 201 or 200:
             data = {
                 'detail': res.content,
                 'message': 'Successful payment',

@@ -15,7 +15,6 @@ def private_key():
     in a payment request
     """
     key = config('PRIVATE_KEY')
-    print(key)
     return key
 
 if __name__ == "__main__":
