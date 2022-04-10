@@ -2,6 +2,9 @@
 
 [![Made in Tanzania](https://img.shields.io/badge/made%20in-tanzania-008751.svg?style=flat-square)](https://github.com/Tanzania-Developers-Community/made-in-tanzania)
 
+[![Downloads](https://pepy.tech/badge/pyshoket)](https://pepy.tech/project/pyshoket)
+[![Downloads](https://pepy.tech/badge/pyshoket/month)](https://pepy.tech/project/pyshoket)
+[![Downloads](https://pepy.tech/badge/pyshoket/week)](https://pepy.tech/project/pyshoket)
 
 - A Python wrapper for Shoket API. 
 - Make online payments easy with `pyshoket`, connecting MNO such as Tigo (Tigopesa),
